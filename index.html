@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD SYSTEM</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/steyle.css">
+</head>
+<body>
+    <h1>CRUD SYSTEM</h1>
+
+<div class="container  pt-5">
+  <div class="row ">
+    <div class="col ">
+        <div class="form-floating mb-3">
+            <input oninput="validationName()" type="text" class="form-control" id="productName" placeholder="productName">
+            <label for="productName">product Name</label>
+            <p id="validationName" class="alert alert-danger d-none"> "The string must start with a letter, contain only letters and numbers, and have a length between 3 to 20 characters."</p>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input oninput="validationPrice()" type="text" class="form-control" id="productPrice" placeholder="productPrice">
+            <label for="productPrice">Product Price</label>
+            <p id="validationPrice" class="alert alert-danger d-none">The price must include correct thousands separators.</p>
+          </div>
+          <div class="form-floating mb-3">
+            <input oninput="validationCategory()" type="text" list="Category" class="form-control" id="productCategory" placeholder="productCategory">
+            <label for="productCategory">product Category</label>
+            <p class="alert alert-danger d-none" id="validationCategory">"The string must start with a letter, contain only letters and numbers, and have a length between 3 to 20 characters."</p>
+            <datalist id="Category">
+                <option>TV</option>
+                <option>MOBILE</option>
+                <option>Electronics</option>
+            </datalist>
+          </div>
+          <div class="form-floating mb-3">
+            <input onchange="validationImage()" type="file"  class="form-control" id="productImage" placeholder="productImage">
+            <label  for="productImage">product Image</label>
+            <p id="validationImage" class="alert alert-danger d-none">Create Image</p>
+          </div>
+          <div class="form-floating mb-3">
+             <textarea  oninput="validationDescription()" style="height: 150px;" class="form-control" id="productDescription" placeholder="productDescription"></textarea>
+            <label for="productDescription">product Description</label>
+            <p class="alert alert-danger d-none" id="validationDescription">"The string must start with a letter, contain only letters and numbers, and have a length between 3 to 20 characters."</p>
+          </div>
+         <button id="addButton" onclick='addNewProduct()' class="btn btn-outline-dark w-100 text-white">ADD</button>
+         <button id="upDateButton" onclick='upDateElement()' class="btn btn-outline-dark w-100 text-white d-none">upDate</button>
+
+         <div class="pt-3">
+          <input oninput="searchData()" type="text" id="searchElament" class="form-control" placeholder="Search..." >
+         </div>
+    </div>
+  </div>
+  <div class="row py-5 g-3" id="dataRow">
+    
+</div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

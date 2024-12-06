@@ -1,0 +1,43 @@
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url(../img/textured-metal-background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: sans-serif;
+}
+h1 {
+    font-family: Impact;
+padding-top: 50px;
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    outline: none; 
+    transition: border-color 0.3s; 
+}
+
+.form-control:focus {
+    border-bottom: 2px solid black;
+}
+
+.form-floating .form-control:focus ~ label,
+.form-floating .form-control:not(:placeholder-shown) ~ label {
+    top: -12px; 
+    font-size: 12px;
+    color: black;
+}
+img {
+    height: 200px;
+    object-fit: fill;
+}
